@@ -7,7 +7,11 @@ app = Flask(__name__)
 # Configuración de la base de datos
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = '******'
+<<<<<<< HEAD
+app.config['MYSQL_PASSWORD'] = '********'
+=======
+app.config['MYSQL_PASSWORD'] = '********'
+>>>>>>> 99bc848289ff4ef190d6a39e14ac04ecc574cedc
 app.config['MYSQL_DB'] = 'proyecto_cac'
 mysql = MySQL(app)
 
