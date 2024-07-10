@@ -1,22 +1,51 @@
 {% include 'header.html' %}
 <form method="POST" action="/update" enctype="multipart/form-data">
-    <input hidden type="text" value="{{empleado[0]}}" name="txtId" id="txtId" >
-    <label for="txtnombre">Nombre</label>
-    <input type="text" name="txtNombre" id="txtNombre" value="{{empleado[1]}}"/>
-    <br/>
-    <label for="txtdoc">Doc</label>
-    <input type="number" name="txtDoc" id="txtDoc" value="{{empleado[2]}}"/>
-    <br/>
-    <label for="txtdirección">Dirección</label>
-    <input type="tex" name="txtDirección" id="txtDirección" value="{{empleado[3]}}"/>
-    <br/>
-    <label for="txtcorreo">Correo</label>
-    <input type="email" name="txtCorreo" id="txtCorreo" value="{{empleado[4]}}"/>
-    <br/>
-    Foto: {{empleado[5]}}
-    <label for="txtfoto">Foto de Perfil</label>
-    <input type="file" name="txtFoto" id="txtFoto"/>
-    <br/>
-    <input type="submit" value="Modificar empleado"/>
+    <div class="card bg-dark text-light">
+        <div class="card-header">
+            Modificar empleado
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                <input hidden type="text" value="{{empleado[0]}}" name="txtId" id="txtId">
+            <div class="form-group row">
+                <label for="txtnombre" class="col-sm-2 col-form-label">Nombre</label>
+                <div class="col-sm-10">
+                    <input type="text" name="txtNombre" id="txtNombre" value="{{empleado[1]}}" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="txtdoc" class="col-sm-2 col-form-label">Doc</label>
+                <div class="col-sm-10">
+                    <input type="number" name="txtDoc" id="txtDoc" value="{{empleado[2]}}" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="txtdirección" class="col-sm-2 col-form-label">Dirección</label>
+                <div class="col-sm-10">
+                    <input type="tex" name="txtDirección" id="txtDirección" value="{{empleado[3]}}" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="txtcorreo" class="col-sm-2 col-form-label">Correo</label>
+                <div class="col-sm-10">
+                    <input type="email" name="txtCorreo" id="txtCorreo" value="{{empleado[4]}}" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="txtfoto" class="col-sm-2 col-form-label">Foto de Perfil</label>
+                <div class="col-sm-10">
+                    <input type="file" name="txtFoto" id="txtFoto" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <input class="btn btn-success" type="submit" value="Modificar empleado" />
+                    <a class="btn btn-primary" href="{{ url_for('index')}}">Volver</a>
+                </div>
+            </div>
+            </p>
+        </div>
+    </div>
+
 </form>
-{% include 'footer.html' %} 
+{% include 'footer.html' %}
