@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+{% include 'header.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema-empleados</title>
-</head>
-
-<body>
     <h1>Empleados</h1>
     <table>
         <thead>
             <tr>
-                <th>id</th>
+                <th>#</th>
                 <th>Foto</th>
                 <th>Nombre</th>
                 <th>Doc</th>
@@ -29,10 +21,14 @@
                 <td>{{empleado[2]}}</td>
                 <td>{{empleado[3]}}</td>
                 <td>{{empleado[4]}}</td>
+                <td>
+                    <a href="/modify/{{empleado[0]}}">Editar</a>
+                    |
+                    <a href="/delete/{{empleado[0]}}">Borrar</a>
+                </td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
-</body>
 
-</html>
+    {% include 'footer.html' %}
